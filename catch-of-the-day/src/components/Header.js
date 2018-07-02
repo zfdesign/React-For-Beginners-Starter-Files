@@ -9,7 +9,8 @@ class Header extends React.Component {
                         <span className="of">of</span>
                         <span className="the">the</span>
                      </span>
-                     day</h1>
+                     day
+                </h1>
                 <div className="tagline">
                     <span>{this.props.tagline}</span>
                 </div>
