@@ -1,14 +1,26 @@
 import React from "react";
 
 class StorePicker extends React.Component {
-    super(props){
+    myInput = React.createRef();
 
-    }
-    render(props) {
+    goToStore = event => {
+        debugger;
+        event.preventDefault();
+        // Get the text from the input
+        console.log(this);
+    };
+
+    render() {
         return (
-            <form className="store-selctor">
+            <form className="store-selctor" onSubmit={this.goToStore}>
                 <h2>Please enter a Store</h2>
-                <input type="text" placeholder={ this.props.placeholderText } />
+                <input 
+                    type="text" 
+                    required 
+                    placeholder="Store name"
+                    ref={this.myInput}
+                    defaultValue="Test store"
+                />
                 <button type="submit">Visit store</button>
             </form>
         )
