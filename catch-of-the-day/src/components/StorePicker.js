@@ -4,10 +4,9 @@ class StorePicker extends React.Component {
     myInput = React.createRef();
 
     goToStore = event => {
-        debugger;
         event.preventDefault();
         // Get the text from the input
-        console.log(this);
+        console.log(this.myInput.value.value);
     };
 
     render() {
@@ -19,7 +18,7 @@ class StorePicker extends React.Component {
                     required 
                     placeholder="Store name"
                     ref={this.myInput}
-                    defaultValue="Test store"
+                    defaultValue=""
                 />
                 <button type="submit">Visit store</button>
             </form>
